@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number (n): ");
+        long n = scanner.nextLong();
+
+        scanner.close();
+
+        long inverse = calculateInverse(n);
+
+        System.out.println("Inverse of " + n + " is: " + inverse);
+    }
+
+    public static long calculateInverse(long n) {
+        long inverse = 0;
+        long position = 1;
+
+        while (n != 0) {
+            long digit = n % 10;
+            inverse += position * Math.pow(10, digit - 1);
+            n /= 10;
+            position++;
+        }
+
+        return inverse;
+    }
+}
