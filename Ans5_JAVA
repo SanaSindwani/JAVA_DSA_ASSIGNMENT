@@ -1,0 +1,13 @@
+import java.util.*;
+ 
+class Main{	
+public static void main(String[] args)
+	{
+		int number = 12345;
+		
+		int digit = (int)(Math.log10(number))+1;
+		
+		System.out.print("Number of Digits = "+digit);
+
+	}
+}
